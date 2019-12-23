@@ -1,10 +1,13 @@
 import React, {useState, useEffect} from 'react';
 
 import {
-  useParams
+  useParams,
+  Link
 } from "react-router-dom";
 
 import axios from 'axios';
+
+import './Content.scss';
 
 const Content = (props) => {
   const [data, setData] = useState({});
@@ -25,9 +28,20 @@ const Content = (props) => {
 
   return (
    <>
-   <h1>hi</h1>{id}
-   {data.Title}
-   {data.Plot}
+   <article className="container content-wrapper">
+    <img src={data.Poster} alt=""/>
+    <div className="content">
+      <h1>{data.Title}</h1>
+      <ul>
+        <li>Ratings: {data.imdbRating}</li>
+        <li>Votes: {data.imdbVotes}</li>
+        <li>Awards: {data.Awards}</li>
+      </ul>
+      <p>{data.Plot}</p>
+    </div>
+   
+   </article>
+   
    </>
   );
 }
