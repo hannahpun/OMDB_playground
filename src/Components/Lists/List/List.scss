@@ -1,0 +1,22 @@
+.list{
+  // flex: 1;
+  // text-align: center;
+  margin: 0 5px 30px;
+  background-color: #fff;
+  // padding-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  img{
+    width: 250px;
+  }
+  figcaption{
+    padding: 20px 20px 0;
+    max-width: 250px;
+  }
+  .btn{
+    // width: 50px;
+    align-self: flex-end;
+    font-size: 12px;
+  }
+}

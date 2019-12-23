@@ -1,0 +1,19 @@
+// custom
+@import "base/variables";
+
+@import "../../node_modules/bootstrap-scss/bootstrap";
+
+
+
+body{
+  background-color: #ecf0f1;
+}
+.nav{
+  display: flex;
+  justify-content: flex-end;
+  padding: 15px;
+  a{
+    padding: 0 15px;
+    text-transform: uppercase;
+  }
+}
