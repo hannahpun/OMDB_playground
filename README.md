@@ -1,5 +1,4 @@
-> OMDB_playground
-This project used the basic react/redux and integrate [OMDb API](www.omdbapi.com) bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+> This project used the basic react/redux and integrate [OMDb API](www.omdbapi.com) bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ![Image](https://i.imgur.com/44nnblg.png)
 
