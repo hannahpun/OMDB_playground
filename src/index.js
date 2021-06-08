@@ -2,8 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import { Provider } from 'react-redux';
-import { createStore, compose} from 'redux';
-import favListsReducer from "./store/reducers/favLists";
+import { createStore, compose } from 'redux';
+import favListsReducer from './store/reducers/favLists';
 
 import './_axios-setting';
 
@@ -20,9 +20,9 @@ const rootReducer = favListsReducer;
 const store = createStore(rootReducer, composeEnhancers());
 
 const app = (
-  <Provider store={store}>
-    <App />
-  </Provider>
+    <Provider store={store}>
+        <App />
+    </Provider>
 );
 
 ReactDOM.render(app, document.getElementById('root'));
