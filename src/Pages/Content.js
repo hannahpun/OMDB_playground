@@ -1,8 +1,7 @@
 import React, {useState, useEffect} from 'react';
 
 import {
-  useParams,
-  Link
+  useParams
 } from "react-router-dom";
 
 import axios from 'axios';
@@ -20,10 +19,10 @@ const Content = (props) => {
       );
 
       setData(result.data); 
-      console.log('data: ', data)
+      // console.log('data: ', data)
     };
     fetchData()
-  }, [])
+  }, [id])
 
 
   return (

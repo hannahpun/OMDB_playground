@@ -45,7 +45,7 @@ const Home = (props) => {
     };
     fetchData();
     
-  }, [pageId, url]);
+  }, [pageId, url, queryTitle, queryCat]);
 
   const onChangeValue = (e) => {
     setQuery(e.target.value)
