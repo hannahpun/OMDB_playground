@@ -47,8 +47,8 @@ if [[ $* == *--full* ]]; then
     echo "--------------Running full migration------------------"
     sleep 3
     ts_migrate_format_eslint
-    ts_migrate_rename
-    ts_migrate_codemods
+    # ts_migrate_rename
+    # ts_migrate_codemods
 else
     if [[ $* == *--check* ]]; then
         ts_migrate_typecheck
