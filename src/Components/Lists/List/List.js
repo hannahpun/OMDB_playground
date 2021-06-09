@@ -3,7 +3,7 @@ import placeholder from "../../../assets/img/300x445.png";
 import "./List.scss";
 
 import { connect } from "react-redux";
-import * as actions from "store/actions/favLists";
+import * as actions from "../../../store/actions/favLists";
 
 import { Link } from "react-router-dom";
 
