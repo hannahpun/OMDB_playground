@@ -1,43 +1,42 @@
 {
-  "compileOnSave": false,
   "compilerOptions": {
-      "incremental": true,
-      "rootDir": ".",
-      "sourceMap": true,
-      "declaration": false,
-      "moduleResolution": "node",
-      "emitDecoratorMetadata": true,
-      "allowSyntheticDefaultImports": true,
-      "jsx": "react",
-      "experimentalDecorators": true,
-      "allowJs": true,
-      "noEmit": true,
-      "strict": true,
-      "importHelpers": true,
-      "target": "es2015",
-      "module": "esnext",
-      "types": [
-          "node",
-          "react-dom",
-          "react-intl",
-          "react-intl-redux",
-          "react-redux",
-          "react-router",
-          "react-router-dom",
-          "recompose",
-          "redux-mock-store",
-          "styled-components"
-      ],
-      "lib": [
-          "es2017",
-          "dom"
-      ],
-      "skipLibCheck": true,
-      "skipDefaultLibCheck": true,
-      "baseUrl": ".",
+    "incremental": true,
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "allowSyntheticDefaultImports": true,
+    "jsx": "react",
+    "experimentalDecorators": true,
+    "allowJs": true,
+    "noEmit": true,
+    "strict": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "types": [
+      "node",
+      "react-dom",
+      "react-redux",
+      "react"
+    ],
+    "lib": [
+      "es2017",
+      "dom"
+    ],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": "src/",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true
   },
-  "include": ["src/**/*"],
+  "include": [
+    "src/*"
+  ],
   "exclude": [
-      "node_modules"
+    "node_modules"
   ]
 }

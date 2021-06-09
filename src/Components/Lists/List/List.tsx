@@ -5,9 +5,10 @@ import "./List.scss";
 import { connect } from "react-redux";
 import * as actions from "../../../store/actions/favLists";
 
+// @ts-expect-error ts-migrate(7016) FIXME: Could not find a declaration file for module 'reac... Remove this comment to see the full error message
 import { Link } from "react-router-dom";
 
-const List = (props) => {
+const List = (props: any) => {
   // Toggle Fav List
   let button = null;
   if (Object.keys(props.favLists).length > 0 && props.favLists[props.id]) {
@@ -50,15 +51,15 @@ const List = (props) => {
     </div>
   );
 };
-const mapStateToProps = (state) => {
+const mapStateToProps = (state: any) => {
   return {
     favLists: state.favLists,
   };
 };
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = (dispatch: any) => {
   return {
-    onfavListsAdd: (id, favList) => dispatch(actions.favListsAdd(id, favList)),
-    onfavListsRemove: (id) => dispatch(actions.favListsRemove(id)),
+    onfavListsAdd: (id: any, favList: any) => dispatch(actions.favListsAdd(id, favList)),
+    onfavListsRemove: (id: any) => dispatch(actions.favListsRemove(id)),
   };
 };
 

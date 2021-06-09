@@ -3,7 +3,7 @@ import Lists from "../Components/Lists/Lists";
 
 import { connect } from "react-redux";
 
-const Content = (props) => {
+const Content = (props: any) => {
   useEffect(() => {
     console.log(props.favLists);
   }, []);
@@ -15,7 +15,7 @@ const Content = (props) => {
   );
 };
 
-const mapStateToProps = (state) => {
+const mapStateToProps = (state: any) => {
   return {
     favLists: state.favLists,
   };

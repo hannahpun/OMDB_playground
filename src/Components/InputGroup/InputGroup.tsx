@@ -1,9 +1,16 @@
 import React from 'react';
 import './InputGroup.scss';
+// @ts-expect-error ts-migrate(7016) FIXME: Could not find a declaration file for module 'reac... Remove this comment to see the full error message
 import { Link } from 'react-router-dom';
-import PropTypes from 'prop-types';
 
-const InputGroup = ({ titleValue, onSearch, onChangeValue, onChangeCat }) => {
+type Props = {
+    titleValue: string;
+    onSearch: (...args: any[]) => any;
+    onChangeValue: (...args: any[]) => any;
+    onChangeCat: (...args: any[]) => any;
+};
+
+const InputGroup = ({ titleValue, onSearch, onChangeValue, onChangeCat }: Props) => {
     return (
         <fieldset className='search-form'>
             <legend>Search IMDB</legend>
@@ -37,13 +44,6 @@ const InputGroup = ({ titleValue, onSearch, onChangeValue, onChangeCat }) => {
             </div>
         </fieldset>
     );
-};
-
-InputGroup.propTypes = {
-    titleValue: PropTypes.string.isRequired,
-    onSearch: PropTypes.func.isRequired,
-    onChangeValue: PropTypes.func.isRequired,
-    onChangeCat: PropTypes.func.isRequired
 };
 
 export default InputGroup;

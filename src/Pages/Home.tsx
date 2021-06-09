@@ -2,13 +2,14 @@ import React, { useState, useEffect } from "react";
 import Lists from "../Components/Lists/Lists";
 import InputGroup from "../Components/InputGroup/InputGroup";
 import axios from "axios";
+// @ts-expect-error ts-migrate(7016) FIXME: Could not find a declaration file for module 'reac... Remove this comment to see the full error message
 import { useLocation } from "react-router-dom";
 
 function useQuery() {
   return new URLSearchParams(useLocation().search);
 }
 
-const Home = (props) => {
+const Home = (props: any) => {
   const [data, setData] = useState([]);
   const [errorMsg, setErrorMsg] = useState("");
   const [dataCount, setDataCount] = useState(0);
@@ -44,15 +45,15 @@ const Home = (props) => {
     fetchData();
   }, [pageId, url, queryTitle, queryCat]);
 
-  const onChangeValue = (e) => {
+  const onChangeValue = (e: any) => {
     setQuery(e.target.value);
   };
 
-  const onChangeCat = (e) => {
+  const onChangeCat = (e: any) => {
     setQueryCat(e.target.value);
   };
 
-  const onSearch = (e) => {
+  const onSearch = (e: any) => {
     setUrl(
       `/?apikey=a4149d67&s=${queryTitle}&page=${pageId}${
         queryCat ? `&type=${queryCat}` : ``
